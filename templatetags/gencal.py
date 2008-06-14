@@ -17,8 +17,8 @@ def gencal(date = datetime.datetime.now(), cal_items=[]):
 	A listing of variables and their meanings:
 	
 	* day is the datetime of the day you'd like to reference
-	* url is the url to the object you'd like to reference
 	* title is the text of the event that will be rendered
+	* url is the url to the object you'd like to reference, it isn't necessary. If you don't wish to pass in a url, just pass it as None
 	* class is a non-necessary field that will apply class="your_entry" to the list item
 	
 	My suggested urls.py file is:
@@ -63,6 +63,7 @@ def gencal(date = datetime.datetime.now(), cal_items=[]):
 		lastmonth = month-1
 		prev_date = datetime.datetime(year, month-1, 1)
 	
+	# account for next month in case of Dec
 	if month+1 == 13:
 		next_date = datetime.datetime(year+1, 1, 1)
 	else:
