@@ -22,12 +22,12 @@ def gencal(date = datetime.datetime.now(), cal_items=[]):
 	* class is a non-necessary field that will apply class="your_entry" to the list item
 	
 	My suggested urls.py file is:
-	_Note: Its important to name your year/month url gencal or the backwards/forwards links won't work_
+	*Note: Its important to name your year/month url gencal or the backwards/forwards links won't work*;
 	
 	::
 	
 		urlpatterns = patterns('',
-			(r'^(?P<year>\d{4})/(?P<month>\d+)/$', 'online_department.schedule.views.index', name='gencal'),
+			url(r'^(?P<year>\d{4})/(?P<month>\d+)/$', 'online_department.schedule.views.index', name='gencal'),
 			(r'^$', 'online_department.schedule.views.index'),
 		)
 		
