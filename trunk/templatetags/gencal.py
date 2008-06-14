@@ -11,7 +11,8 @@ def gencal(date = datetime.datetime.now(), cal_items=[]):
 	This will generate a calendar. It expects the year & month (in datetime format)
 	and a list of dicts in the following format:
 	
-	cal_items = [{ 'day':datetime(2008,1,30), 'title':"Concert at Huckelberries", 'class':"concert", 'url':'/foo/2' }, { 'day':datetime(2008,2,4), 'title':"BBQ at Mom\'s house", 'calendar':"restaurant", 'url':'/restaurants/9' }]
+	cal_items = [{ 'day':datetime(2008,1,30), 'title':"Concert at Huckelberries", 'class':"concert",    'url':'/foo/2' }, 
+	             { 'day':datetime(2008,2,4),  'title':"BBQ at Mom\'s house",      'class':"restaurant", 'url':'/restaurants/9' }]
 	
 	A listing of variables and their meanings:
 	
@@ -44,9 +45,9 @@ def gencal(date = datetime.datetime.now(), cal_items=[]):
 		table.cal_month_calendar div.table_cell_contents { position: relative; height: 65px; width: 65px;}
 		table.cal_month_calendar div.month_num { position: absolute; top: 1px; left: 1px; }
 		table.cal_month_calendar ul.event_list { list-style-type: none; padding: 15px 0 0 0; margin: 0;}
-		table { border-collapse: collapse; }
-		th { color: white; background: black;}
-		td, th { border: 1px solid black; }
+		table.cal_month_calendar { border-collapse: collapse; }
+		table.cal_month_calendar th { color: white; background: black;}
+		table.cal_month_calendar td, th { border: 1px solid black; }
 		</style>
 	
 	"""
